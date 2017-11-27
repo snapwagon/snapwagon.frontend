@@ -1,0 +1,48 @@
+.marketing-section {
+  height: 500px;
+  // border-bottom: 1px solid #e9ecef;
+}
+
+.gradient {
+  background: #00F260;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cta {
+  justify-content: center;
+}
+
+.info-centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.marketing-side-by-side {
+  height: 750px;
+}
+
+.mktg-image {
+  overflow: hidden;
+}
+
+.mktg-info-container {
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.08), 0 1px 3px 0 rgba(0,0,0,.05);
+  height: 500px;
+  width: 500px;
+  background-color: #f7f9ff;
+}
+
+.about-platform {
+  background-color: #f7f9ff;
+}
+
+.bg-circle-accent {
+  height: 110px;
+  width: 110px;
+  border-radius: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,18 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const {{name}} = (props) => {
+  return (
+    <div>{props.componentName}</div>
+  );
+}
+
+{{name}}.propTypes = {
+  componentName: PropTypes.string
+};
+
+{{name}}.defaultProps = {
+  componentName: '{{name}}'
+};
+
+export default {{name}};

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import {login} from '../actions/auth';
 import {authErrors, isAuthenticated} from '../reducers';
@@ -8,7 +8,7 @@ import {authErrors, isAuthenticated} from '../reducers';
 const Login = (props) => {
   if (props.isAuthenticated) {
     return (
-      <Redirect to="/" />
+      <Redirect to="/dashboard" />
     );
   }
 

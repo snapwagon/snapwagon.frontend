@@ -1,45 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Switch} from 'react-router-dom';
+import Login from './containers/Login';
+import PrivateRoute from './containers/PrivateRoute';
+import Dashboard from './containers/Dashboard/Dashboard';
+import Home from './containers/Home/Home';
+import { Container } from 'reactstrap';
 
-import {organization} from './actions/organization';
-import {serverOrg} from './reducers/org';
+import Header from './containers/Header/Header';
+import ErrorBoundary from './containers/ErrorBoundary';
 
-class App extends Component {
-  componentDidMount() {
-    this.props.fetchOrg();
-  }
-
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        {this.props.organization}
+        <ErrorBoundary>
+          <Header />
+        </ErrorBoundary>
+          <Switch>
+            <Route exact path="/login/" component={Login} />
+            <PrivateRoute path="/dashboard/" component={Dashboard} />
+            <Route path="/" component={Home}/>
+          </Switch>
       </div>
     );
   }
 }
 
 App.propTypes = {
-  organization: PropTypes.shape({
-    id: PropTypes.string
-  }),
-  fetchOrg: PropTypes.func
+
 };
 
 App.defaultProps = {
-  organization: undefined
+
 };
 
-export default connect(
-  (state) => ({ organization: serverOrg(state) }),
-  { fetchOrg: organization }
-)(App);
+export default App;

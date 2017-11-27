@@ -23,7 +23,6 @@ yarn-error.log*
 
 dist/
 lib/
-assets/
 npm-debug.log
 *.tar.gz
 *.tgz

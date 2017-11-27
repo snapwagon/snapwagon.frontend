@@ -1,0 +1,48 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Icon from '../Icon';
+
+const {{name}} = (props) => {
+  return (
+    <Icon
+      height={props.height}
+      viewBox={props.viewBox}
+      width={props.width}
+      containerClassNames={props.containerClassNames}
+      containerStyles={props.containerStyles}
+    >
+      {/* Add Icon Here */}
+    </Icon>
+  );
+};
+
+{{name}}.propTypes = {
+  height: PropTypes.string,
+  viewBox: PropTypes.string,
+  width: PropTypes.string,
+  fillColor: PropTypes.string,
+  containerClassNames: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.bool)
+  ]),
+  containerStyles: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+  svgClassNames: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.bool)
+  ]),
+  svgStyles: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+};
+
+{{name}}.defaultProps = {
+  height: '{{height}}',
+  viewBox: '{{viewBox}}',
+  width: '{{width}}',
+  fillColor: '#000',
+  containerClassNames: undefined,
+  containerStyles: undefined,
+  svgClassNames: undefined,
+  svgStyles: undefined
+};
+
+export default {{name}};

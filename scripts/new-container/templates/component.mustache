@@ -1,0 +1,37 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { push } from 'react-router-redux';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+class {{name}}Container extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <div>{props.componentName}</div>
+    );
+  }
+
+}
+
+{{name}}Container.propTypes = {
+  componentName: PropTypes.string
+};
+
+{{name}}Container.defaultProps = {
+  componentName: '{{name}}'
+};
+
+const {{name}} = withRouter(
+  connect((state) => ({}))({{name}}Container)
+);
+
+export default {{name}};

@@ -4,11 +4,10 @@ const initialState = {
   organization: undefined
 };
 export default (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
-    case organization.ORG_SUCCESS:
+    case organization.SUCCESS:
       return {
-        organization: action.payload.org
+        organization: action.payload
       };
     default:
       return state;

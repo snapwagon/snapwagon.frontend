@@ -1,14 +1,18 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
+import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as reducers from '../reducers';
+
+import ErrorBoundary from './ErrorBoundary';
 
 const PrivateRoute = ({ component: Component, isAuthenticated, ...rest }) => (
   <Route
     {...rest}
     render={(props) => (
     isAuthenticated ? (
-      <Component {...props} />
+      <ErrorBoundary>
+        <Component {...props} />
+      </ErrorBoundary>
     ) : (
       <Redirect to={{
         pathname: '/login',

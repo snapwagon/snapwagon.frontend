@@ -21,7 +21,7 @@ ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <ErrorBoundary>
-          <App/>
+          <App />
         </ErrorBoundary>
       </ConnectedRouter>
     </Provider>

@@ -7,11 +7,12 @@ const Circle = (props) => {
       className="bg-circle-accent"
       style={{
         backgroundColor: props.fillColor
-      }}>
+      }}
+    >
       {props.children}
     </div>
   );
-}
+};
 
 Circle.propTypes = {
   children: PropTypes.oneOfType([

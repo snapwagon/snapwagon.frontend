@@ -32,6 +32,7 @@ import ken from '../../assets/ken.jpg';
 import john from '../../assets/JYeg.jpg';
 import jason from '../../assets/jaypa.jpg';
 import dashboard from '../../assets/analytics.png';
+import splash from '../../assets/splash.jpg';
 
 
 class HomeContainer extends React.Component {
@@ -49,15 +50,15 @@ class HomeContainer extends React.Component {
       <div>
         <section className="marketing-section d-flex flex-column cta">
           <Container>
-            <Fade in={this.state.fadeIn} tag="h4">
+            <Fade in={this.state.fadeIn} tag="h1" className="text-white">
               Convert more of your visitors
             </Fade>
-            <Fade in={this.state.fadeIn} tag="h6">
+            <Fade in={this.state.fadeIn} tag="h2" className="text-white mb-3">
               By offering product incentives seamlessly from your website
             </Fade>
             <Row>
               <InputGroup className="col-xs-12 col-md-5">
-                <Input type="email" placeholder="Enter your email"/>
+                <Input type="email" placeholder="Enter your email" />
                 <InputGroupButton><Button color="success">Get Started</Button></InputGroupButton>
               </InputGroup>
             </Row>
@@ -74,17 +75,17 @@ class HomeContainer extends React.Component {
             </h4>
             <Row className="mx-0">
               <div className="col-lg-4 d-flex flex-column align-items-center p-3">
-                <Stats fillColor="#000"/>
+                <Stats fillColor="#000" />
                 <h5 className="text-center my-4">Higher Conversion Rates</h5>
                 <p><a className="btn btn-outline-secondary" href="#" role="button">Learn More</a></p>
               </div>
               <div className="col-lg-4 d-flex flex-column align-items-center p-3">
-                <Target fillColor="#000"/>
+                <Target fillColor="#000" />
                 <h5 className="text-center my-4">Increase Customer Targeting</h5>
                 <p><a className="btn btn-outline-secondary" href="#" role="button">Learn More</a></p>
               </div>
               <div className="col-lg-4 d-flex flex-column align-items-center p-3">
-                <PayPerClick fillColor="#000"/>
+                <PayPerClick fillColor="#000" />
                 <h5 className="text-center my-4">Decreased Cost Per Acquisition</h5>
                 <p><a className="btn btn-outline-secondary" href="#" role="button">Learn More</a></p>
               </div>
@@ -125,29 +126,29 @@ class HomeContainer extends React.Component {
         </section>
 
         <section className="marketing-section d-flex flex-column info-centered">
-            <Row>
-              <Col className="col-sm-12 col-md-6 p-4 d-flex flex-column justify-content-center">
-                <h3>Integrate with your marketing funnel</h3>
-                <h5>Collect attribution and conversion data on the performance of the offering.</h5>
-                {/* <Funnel containerClassNames="align-self-center" /> */}
-              </Col>
-              <Col className="sm-hide col-sm-12 col-md-6 mktg-image">
-                <img src={gaLaptop} className="rounded"/>
-              </Col>
-            </Row>
+          <Row>
+            <Col className="col-sm-12 col-md-6 p-4 d-flex flex-column justify-content-center">
+              <h3>Integrate with your marketing funnel</h3>
+              <h5>Collect attribution and conversion data on the performance of the offering.</h5>
+              {/* <Funnel containerClassNames="align-self-center" /> */}
+            </Col>
+            <Col className="sm-hide col-sm-12 col-md-6 mktg-image">
+              <img src={gaLaptop} className="rounded" />
+            </Col>
+          </Row>
         </section>
 
         <section className="marketing-section d-flex flex-column info-centered">
           <Container>
-           <Row>
-             <Col className="mx-0">
-               <img src={dashboard} className="rounded mw-100"/>
-             </Col>
-             <Col className="">
-               <h2>Analyze</h2>
-               <h4>Use the platform to analyze product performance, tweak and optimize offering.</h4>
-             </Col>
-           </Row>
+            <Row>
+              <Col className="mx-0">
+                <img src={dashboard} className="rounded mw-100" />
+              </Col>
+              <Col className="align-self-center">
+                <h2>Analyze</h2>
+                <h4>Use the platform to analyze product performance, tweak and optimize the offering.</h4>
+              </Col>
+            </Row>
           </Container>
         </section>
         <section className="marketing-section d-flex flex-column about-platform info-centered">
@@ -157,37 +158,37 @@ class HomeContainer extends React.Component {
 
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <BrowserEditor fillColor=""/>
+                  <BrowserEditor fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Coupon Editor</h5>
               </div>
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <Email fillColor=""/>
+                  <Email fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Email</h5>
               </div>
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <Analytics fillColor=""/>
+                  <Analytics fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Analytics</h5>
               </div>
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <Customer fillColor=""/>
+                  <Customer fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Customer Profiles</h5>
               </div>
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <Shield fillColor=""/>
+                  <Shield fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Payment Management</h5>
               </div>
               <div className="d-flex flex-column align-items-center p-3">
                 <Circle fillColor="">
-                  <Devices fillColor=""/>
+                  <Devices fillColor="" />
                 </Circle>
                 <h5 className="text-center my-2">Mobile Optimized</h5>
                 {/* <p>With mobile traffic approaching 70%, snapwagon is built
@@ -203,17 +204,17 @@ class HomeContainer extends React.Component {
             </h2>
             <Row>
               <div className="col-lg-4 d-flex flex-column align-items-center p-3 ">
-                <img className="rounded-circle" src={john} alt="Generic placeholder image" width="140" height="140"/>
+                <img className="rounded-circle" src={john} alt="Generic placeholder image" width="140" height="140" />
                 <h5 className="text-center my-4">John</h5>
                 <p>Product/Tech</p>
               </div>
               <div className="col-lg-4 d-flex flex-column align-items-center p-3">
-                <img className="rounded-circle" src={jason} alt="Generic placeholder image" width="140" height="140"/>
+                <img className="rounded-circle" src={jason} alt="Generic placeholder image" width="140" height="140" />
                 <h5 className="text-center my-4">Jason</h5>
                 <p>Tech</p>
               </div>
               <div className="col-lg-4 d-flex flex-column align-items-center p-3">
-                <img className="rounded-circle" src={ken} alt="Generic placeholder image" width="140" height="140"/>
+                <img className="rounded-circle" src={ken} alt="Generic placeholder image" width="140" height="140" />
                 <h5 className="text-center my-4">Ken</h5>
                 <p>Business</p>
               </div>
@@ -225,13 +226,12 @@ class HomeContainer extends React.Component {
             <h2 className="mb-5">
               Questions?
             </h2>
-            <Button color="success" size="lg">Sign Up</Button>
+            <a color="success" size="lg" target="_blank" className="btn btn-lg btn-success" href="mailto:ken@snapwagon.io">Contact Us</a>
           </Container>
         </section>
       </div>
     );
   }
-
 }
 
 HomeContainer.propTypes = {
@@ -242,8 +242,6 @@ HomeContainer.defaultProps = {
   componentName: 'Home'
 };
 
-const Home = withRouter(
-  connect((state) => ({}))(HomeContainer)
-);
+const Home = withRouter(connect((state) => ({}))(HomeContainer));
 
 export default Home;

@@ -3,13 +3,13 @@ import React from 'react';
 export default class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-     this.state = { error: null, errorInfo: null };
+    this.state = { error: null, errorInfo: null };
   }
 
   componentDidCatch(error, info) {
     // Display fallback UI
     this.setState({
-      error: error,
+      error,
       errorInfo: info
     });
     // You can also log the error to an error reporting service

@@ -17,11 +17,11 @@ class App extends React.Component {
         <ErrorBoundary>
           <Header />
         </ErrorBoundary>
-          <Switch>
-            <Route exact path="/login/" component={Login} />
-            <PrivateRoute path="/dashboard/" component={Dashboard} />
-            <Route path="/" component={Home}/>
-          </Switch>
+        <Switch>
+          <Route exact path="/login/" component={Login} />
+          <PrivateRoute path="/dashboard/" component={Dashboard} />
+          <Route path="/" component={Home} />
+        </Switch>
       </div>
     );
   }

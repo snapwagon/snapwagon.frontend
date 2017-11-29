@@ -26,22 +26,20 @@ class Dashboard extends React.Component {
           this.props.organization.map((org) => {
             return (
               <p key={org.id}>{org.name}</p>
-            )
+            );
           })
         }
       </div>
     );
   }
-
 }
 
 Dashboard.propTypes = {
   organization: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      desc: PropTypes.string
-    })
-  ),
+    id: PropTypes.number,
+    name: PropTypes.string,
+    desc: PropTypes.string
+  })),
   fetchOrg: PropTypes.func
 };
 

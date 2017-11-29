@@ -11,10 +11,10 @@ import * as reducers from '../../reducers';
 
 class HeaderContainer extends React.Component {
   constructor(props) {
-   super(props);
+    super(props);
 
-   this.toggleNavbar = this.toggleNavbar.bind(this);
-   this.state = {
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
       collapsed: true
     };
   }
@@ -29,10 +29,10 @@ class HeaderContainer extends React.Component {
     return (
       <Navbar className="header" color="faded" light expand="md">
         <Container>
-        <NavbarBrand tag={Link} to="/">snapwagon</NavbarBrand>
-        <NavbarToggler onClick={this.toggleNavbar} />
-        <Collapse isOpen={this.state.collapsed} navbar>
-          { this.props.isAuthenticated ?
+          <NavbarBrand tag={Link} to="/">Snapwagon</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} />
+          <Collapse isOpen={this.state.collapsed} navbar>
+            { this.props.isAuthenticated ?
             (
               <Nav className="nav navbar-nav float-xs-right ml-auto" navbar>
                 <NavItem className="border-left-1">
@@ -72,7 +72,7 @@ class HeaderContainer extends React.Component {
 
             )
           }
-        </Collapse>
+          </Collapse>
         </Container>
       </Navbar>
     );
@@ -95,8 +95,6 @@ const mapStateToProps = (state) => ({
   isAuthenticated: reducers.isAuthenticated(state)
 });
 
-const Header = withRouter(
-  connect(mapStateToProps, null)(HeaderContainer)
-);
+const Header = withRouter(connect(mapStateToProps, null)(HeaderContainer));
 
-export default Header
+export default Header;
